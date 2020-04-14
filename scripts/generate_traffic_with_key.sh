@@ -18,7 +18,7 @@ set -euo pipefail
 source util.sh
 
 # Use this to keep track of what HTTP status codes we receive.
-declare -A codes
+# declare -A codes
 
 # generate_traffic will print a status update every UPDATE_FREQUENCY messages.
 UPDATE_FREQUENCY=25

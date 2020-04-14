@@ -45,7 +45,7 @@ cleanup() {
 
 # Defaults.
 APP="../app/app_template.yaml"
-REGION="us-central"
+REGION="australia-southeast1"
 
 if [[ "$#" == 0 ]]; then
   : # Use defaults.
