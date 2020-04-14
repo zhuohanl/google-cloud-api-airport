@@ -26,8 +26,25 @@ schemes:
 paths:
   "/airportName":
     get:
-      description: "Get the airport name for a given IATA code."
+      description: "Get the airport name for a given IATA code, CSV as backend."
       operationId: "airportName"
+      parameters:
+        -
+          name: iataCode
+          in: query
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Success."
+          schema:
+            type: string
+        400:
+          description: "The IATA code is invalid or missing."
+  "/airportNameFromCloudSql":
+    get:
+      description: "Get the airport name for a given IATA code, Cloud SQL as backend."
+      operationId: "airportNameFromCloudSql"
       parameters:
         -
           name: iataCode
